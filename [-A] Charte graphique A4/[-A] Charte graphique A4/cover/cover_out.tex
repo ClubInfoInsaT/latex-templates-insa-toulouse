@@ -1,0 +1,19 @@
+\newpage
+\pagenumbering{gobble}
+\thispagestyle{empty}
+\definecolor{insa_blue}{RGB}{52,83,111}
+\definecolor{insa_red}{RGB}{226,50,46}
+\noindent\begin{tikzpicture}[remember picture, overlay, shift={(current page.south west)}]
+    \draw[draw=none, path fading=east, left color=insa_blue, right color=insa_blue!25!white] (21,7.3) -- (4.3,16.05) -- (21,24.8) -- cycle;
+    \draw[draw=none, path fading=east, left color=insa_blue, right color=insa_blue!60!white] (0,16.2) -- (7,19.75) -- (0,23.1) -- cycle;
+    \draw[draw=none, path fading=east, left color=insa_blue, right color=insa_blue!25!white] (0,17.3) -- (13.7,24.5) -- (2.3,29.7) -- (0,29.7) -- cycle;
+    
+    
+    \draw[draw=none, fill=insa_red] (6.2,0) -- (6.2,1.2) -- (11.6,0) -- cycle;
+    
+    \node[anchor=south west, align=left] at (1.25,3.6) {\textbf{INSA Toulouse}};
+    \node[anchor=south west, align=left] at (1.25,2.20) {135, Avenue de Rangueil \\ 31077 Toulouse Cedex 4 - France \\ \href{http://www.insa-toulouse.fr}{www.insa-toulouse.fr}};
+    
+    \node[anchor=south west] at (11.1,2.2) {\includegraphics[height=1cm, keepaspectratio]{cover/meta/univ.png}};
+    \node[anchor=south west] at (13.4,2.2) {\includegraphics[height=1cm, keepaspectratio]{cover/meta/ministere.png}};
+\end{tikzpicture}

@@ -1,0 +1,30 @@
+\newcommand\tab[1][0.6cm]{\hspace*{#1}} %Create and define tab
+
+\definecolor{lightgray}{gray}{0.85}
+\definecolor{lightgrey}{gray}{0.85}
+
+\definecolor{vlg}{gray}{0.85}
+
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+
+
+
+%------- Do not append new commands after :
+
+\hypersetup{	
+    colorlinks=false, % colorise les liens
+    linkbordercolor={1 1 1},
+    breaklinks=true, % permet le retour à la ligne dans les liens trop longs
+    urlcolor=blue, % couleur des hyperliens 
+    linkcolor=black,	% couleur des liens internes 
+    citecolor=black,	% couleur des références 
+    pdftitle={Etat de l’art associé au projet tuteuré}, % informations apparaissant dans 
+    pdfauthor={}, % les informations du document 
+    pdfsubject={}	% sous Acrobat. 
+}

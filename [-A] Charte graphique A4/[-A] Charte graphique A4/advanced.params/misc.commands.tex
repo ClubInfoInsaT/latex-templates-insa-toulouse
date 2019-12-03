@@ -1,0 +1,41 @@
+\newcommand\tab[1][0.6cm]{\hspace*{#1}} %Create and define tab
+
+\definecolor{lightgray}{gray}{0.85}
+\definecolor{lightgrey}{gray}{0.85}
+\definecolor{vlg}{gray}{0.85}
+
+
+%Patch pour utiliser des équations dans les titres sans que hypperref nous insulte.
+% Définition cyclique, compile pas. Mais c'est l"idée
+%\renewcommand{\chapter}[1]{\chapter{\texorpdfstring{#1}}}
+%\renewcommand{\section}[1]{\section{\texorpdfstring{#1}}}
+%\renewcommand{\subsection}[1]{\subsection{\texorpdfstring{#1}}}
+%\renewcommand{\subsubsection}[1]{\subsubsection{\texorpdfstring{#1}}}
+
+%Chapter No Numbering but appears in TOC
+\newcommand{\chapternn}[1]{\chapter*{#1}\addcontentsline{toc}{chapter}{#1}}
+\newcommand{\sectionnn}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}}
+\newcommand{\subsectionnn}[1]{\subsection*{#1}\addcontentsline{toc}{subsection}{#1}}
+\newcommand{\subsubsectionnn}[1]{\subsubsection*{#1}\addcontentsline{toc}{subsubsection}{#1}}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
+
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+
+%------- Do not append new commands after :
+
+\hypersetup{	
+    colorlinks=false, % colorise les liens
+    linkbordercolor={1 1 1},
+    breaklinks=true, % permet le retour à la ligne dans les liens trop longs
+    urlcolor=blue, % couleur des hyperliens 
+    linkcolor=black,	% couleur des liens internes 
+    citecolor=black,	% couleur des références 
+    pdftitle={}, % informations apparaissant dans 
+    pdfauthor={}, % les informations du document
+    pdfsubject={}	% sous Acrobat. 
+}

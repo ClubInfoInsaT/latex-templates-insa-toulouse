@@ -1,0 +1,18 @@
+\input{main_variables}
+\pagenumbering{gobble}
+\thispagestyle{empty}
+\definecolor{insa_blue}{RGB}{52,83,111}
+\definecolor{insa_red}{RGB}{226,50,46}
+\noindent\begin{tikzpicture}[remember picture, overlay, shift={(current page.south west)}]
+    %\draw[draw=none, fill=blue] (0,7) -- (16.7,15.75) -- (0,24.5) -- cycle;
+    \draw[draw=none, path fading=east, left color=insa_blue, right color=insa_blue!10!white] (0,7) -- (16.7,15.75) -- (0,24.5) -- cycle;
+    \draw[draw=none, path fading=east, left color=insa_blue, right color=insa_blue!10!white] (0,10.3) -- (14.8,18) -- (0,25.7) -- cycle;
+    \draw[draw=none, path fading=east, left color=insa_blue, right color=insa_blue!25!white] (21,16.2) -- (14,19.75) -- (21,23.1) -- cycle;
+    \draw[draw=none, path fading=east, left color=insa_blue, right color=insa_blue!60!white] (21,17.3) -- (7.3,24.5) -- (18.7,29.7) -- (21,29.7) -- cycle;
+    \draw[draw=none, fill=insa_red] (6.5,0) -- (6.5,1.7) -- (13.5,0) -- cycle;
+    \node[anchor=north west, align=right, text width=8cm] at (11,12.5) {\varmaintitle};
+    \node[anchor=north west, align=right, text width=8cm] at (11,11) {\varmainsubtitle};
+    \node[anchor=north west, align=center, text width=12cm] at (4.5,7) {\varcovertext};
+    \node[anchor=north west] at (2,27.7) {\includegraphics[scale=0.25]{cover/meta/logo_insat.pdf}};
+\end{tikzpicture}
+\newpage 
