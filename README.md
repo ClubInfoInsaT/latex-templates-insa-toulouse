@@ -8,7 +8,7 @@ La charte graphique de l'INSA de Toulouse, adaptée à des documents A4, avec un
 
 | First page | Last page |
 |-|-|
-| ![](./[-A] Charte graphique A4/first.jpg) | ![](./) |
+| ![Charte graphique A4](./[-A]&#32;Charte&#32;graphique&#32;A4/first.jpg) | ![Charte graphique A4](./[-A]&#32;Charte&#32;graphique&#32;A4/last.jpg) |
 
 
 ### [-A] Charte graphique poster A2
@@ -17,7 +17,7 @@ La charte graphique de l'INSA de Toulouse, adaptée aux posters A2.
 
 | First page | Last page |
 |-|-|
-| ![](./[-A] Charte graphique poster A2/first.jpg) | ![](./) |
+| ![Charte graphique A4](./[-A]&#32;Charte&#32;graphique&#32;A4/first.jpg) | ![Charte graphique A4](./[-A]&#32;Charte&#32;graphique&#32;A4/last.jpg) |
 
 
 ### [-A] Charte graphique slides
@@ -26,7 +26,7 @@ Template de l'INSA de Toulouse pour réaliser des présentations Beamer.
 
 | First page | Last page |
 |-|-|
-| ![](./[-A] Charte graphique slides/first.jpg) | ![](./) |
+| ![Charte graphique A4](./[-A]&#32;Charte&#32;graphique&#32;A4/first.jpg) | ![Charte graphique A4](./[-A]&#32;Charte&#32;graphique&#32;A4/last.jpg) |
 
 
 ### [4A] Etat de l’art associé au projet d'initiation à la recherche
@@ -35,7 +35,7 @@ Template du document de l'état de l'art du projet d'initiation à la recherche 
 
 | First page | Last page |
 |-|-|
-| ![](./[4A] Etat de l’art associé au projet tuteuré/first.jpg) | ![](./) |
+| ![Charte graphique A4](./[-A]&#32;Charte&#32;graphique&#32;A4/first.jpg) | ![Charte graphique A4](./[-A]&#32;Charte&#32;graphique&#32;A4/last.jpg) |
 
 
 ### [4A] Rapport du projet d'initiation à la recherche
