@@ -44,7 +44,7 @@ Template du document de rapport de projet d'initiation à la recherche de l'INSA
 
 | First page | Last page |
 |-|-|
-| [![Rapport&#32;du&#32;projet&#32;d'initiation&#32;à&#32;la&#32;recherche](./[4A]&#32;Rapport&#32;du&#32;projet&#32;d'initiation&#32;à&#32;la&#32;recherche/thumbnails/first_page.png)](./[4A]&#32;Rapport&#32;du&#32;projet&#32;d'initiation&#32;à&#32;la&#32;recherche/) | [![Rapport&#32;du&#32;projet&#32;d'initiation&#32;à&#32;la&#32;recherche](./[4A]&#32;Rapport&#32;du&#32;projet&#32;d'initiation&#32;à&#32;la&#32;recherche/thumbnails/last_page.png)](./[4A]&#32;Rapport du projet d'initiation à la&#32;recherche/) |
+| [![Rapport&#32;du&#32;projet&#32;d'initiation&#32;à&#32;la&#32;recherche](./[4A]&#32;Rapport&#32;du&#32;projet&#32;d'initiation&#32;à&#32;la&#32;recherche/thumbnails/first_page.png)](./[4A]&#32;Rapport&#32;du&#32;projet&#32;d'initiation&#32;à&#32;la&#32;recherche/) | [![Rapport&#32;du&#32;projet&#32;d'initiation&#32;à&#32;la&#32;recherche](./[4A]&#32;Rapport&#32;du&#32;projet&#32;d'initiation&#32;à&#32;la&#32;recherche/thumbnails/last_page.png)](./[4A]&#32;Rapport&#32;du&#32;projet&#32;d'initiation&#32;à&#32;la&#32;recherche/) |
 
 ## Contributing
 
