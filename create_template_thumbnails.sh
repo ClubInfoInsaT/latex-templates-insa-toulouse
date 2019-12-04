@@ -21,7 +21,7 @@ thumbnails() {
 SAVEIFS=$IFS
 IFS=$(echo -en "\n\b")
 for file in $(find ./ -maxdepth 2 -name "*.pdf"); do
-	log "Creating thumbnails for file : $(basename ${file})"
+	log "Creating thumbnails for template : $(basename ${file})"
 	thumbnails ${file}
 done
 IFS=$SAVEIFS
