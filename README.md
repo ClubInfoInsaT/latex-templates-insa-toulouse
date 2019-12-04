@@ -15,7 +15,7 @@ Si vous cherchez un projet, cliquez directement sur votre année, ou pour avoir 
 
 Nous acceuillons toute remarque ou suggestion d'amélioration concernants ces templates.
 
-Si vous avez créé une template qui n'est pas encore listée ici, n'héistez pas à nous envoyer une pull request.
+Si vous avez créé une template qui n'est pas encore listée ici, n'hésitez pas à nous envoyer une pull request.
 
 ## Licenses
 
