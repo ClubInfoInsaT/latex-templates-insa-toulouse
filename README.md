@@ -1,5 +1,7 @@
 # LaTeX templates pour l'INSA de Toulouse
 
+![](./imgs/banner.png)
+
 ## Templates
 
 Si vous cherchez un projet, cliquez directement sur votre année, ou pour avoir une template générale, cliquez sur [Toutes années](./Templates/Toutes_années/).
