@@ -8,6 +8,8 @@ Ces templates sont spécifiques à des projets de 4ème année.
 
 Template du document de l'état de l'art du projet d'initiation à la recherche de l'INSA de Toulouse
 
+Vous pouvez cloner ce projet directement sur [Overleaf](https://www.overleaf.com) à cette adresse : []()
+
 | First page | Last page |
 |-|-|
 | [![Etat de l'art associé au projet d'initiation à la recherche](./[4A]&#32;Etat&#32;de&#32;l'art&#32;associé&#32;au&#32;projet&#32;d'initiation&#32;à&#32;la&#32;recherche/thumbnails/first_page.png)](./[4A]&#32;Etat&#32;de&#32;l'art&#32;associé&#32;au&#32;projet&#32;d'initiation&#32;à&#32;la&#32;recherche/) | [![Etat de l'art associé au projet d'initiation à la recherche](./[4A]&#32;Etat&#32;de&#32;l'art&#32;associé&#32;au&#32;projet&#32;d'initiation&#32;à&#32;la&#32;recherche/thumbnails/last_page.png)](./[4A]&#32;Etat&#32;de&#32;l'art&#32;associé&#32;au&#32;projet&#32;d'initiation&#32;à&#32;la&#32;recherche/) |
