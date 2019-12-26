@@ -18,8 +18,6 @@ Rapport projet fin d'études à l'INSA de Toulouse.
 
 Portfolio de la 5ème année Innovation Smart Systems (ISS) de l'INSA de Toulouse.
 
-
-
 | First page | Last page |
 |-|-|
 | [![ISS - Portfolio (FR)](./[5A]&#32;ISS&#32;-&#32;Portfolio&#32;(FR)/thumbnails/first_page.png)](./[5A]&#32;ISS&#32;-&#32;Portfolio&#32;(FR)/) | [![ISS - Portfolio (FR)](./[5A]&#32;ISS&#32;-&#32;Portfolio&#32;(FR)/thumbnails/last_page.png)](./[5A]&#32;ISS&#32;-&#32;Portfolio&#32;(FR)/) |
