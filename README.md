@@ -26,4 +26,4 @@ Ce projet est mis à disposition sous licence GPLv2.0.
 
 ## Acknowledgments
 
-La version initiale de ces templates à été créée par [@remigascou](https://github.com/RemiGascou).
+La version initiale de ces templates a été créée par [@remigascou](https://github.com/RemiGascou).
