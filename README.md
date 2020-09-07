@@ -23,7 +23,3 @@ Si vous avez créé une template qui n'est pas encore listée ici, n'hésitez pa
 
 Ce projet est mis à disposition sous licence GPLv2.0.
 
-
-## Acknowledgments
-
-La version initiale de ces templates a été créée par [@remigascou](https://github.com/RemiGascou).
