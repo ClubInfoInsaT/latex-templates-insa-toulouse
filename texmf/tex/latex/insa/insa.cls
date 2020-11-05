@@ -51,7 +51,21 @@
 
 \RequirePackage{xcolor}
 \RequirePackage{tikz}
+\RequirePackage{hyperref}
+
 \usetikzlibrary{fadings}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurations                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Href
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=blue,
+	urlcolor=blue,
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Couleurs                                       %
@@ -148,7 +162,7 @@
 \newcommand{\makefourthcover}{%
 	\clearpage%
 	% Ajout d'une page vide pour toujours avoir la page sur un verso
-	\ifodd\thepage\hbox{}\newpage\else\fi%
+	\ifodd\thepage\else\hbox{}\newpage\fi%
 	\pagenumbering{gobble}%
 	\thispagestyle{empty}%
 	\noindent%

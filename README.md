@@ -23,8 +23,8 @@ votre dossier texmf local (si vous avez installé miktex:
 [TEXMF root directory](https://miktex.org/kb/texmf-roots), section
 `Your own TEXMF root directories`, pour texlive c'est le dossier `~/texmf`).
 
-Dans le cas d'overleaf il suffit de copier le contenu du dossier `texmf/tex/latex/insa`
-à la racine de votre projet.
+Dans le cas d'overleaf il suffit de copier le contenu du dossier
+`texmf/tex/latex/insa`à la racine de votre projet.
 
 ### Utilisation
 
@@ -56,10 +56,23 @@ rester vide
 fait le cours, organise le TD...)
 
 Trois macros sont spécifiques à certaines options:
- - `\numeroTD` - Défini le numéro du TD si la classe est chargée avec l'option `td`
- - `\numeroTP` - Défini le numéro du TP si la classe est chargée avec l'option `tp`
- - `\type` - Permet de définir le type lorsque la classe est chargée avec l'option
-`autre`
+ - `\numeroTD` - Défini le numéro du TD si la classe est chargée avec l'option
+ `td`
+ - `\numeroTP` - Défini le numéro du TP si la classe est chargée avec l'option
+ `tp`
+ - `\type` - Permet de définir le type lorsque la classe est chargée avec
+ l'option `autre`
+
+### Quatrième de couverture
+
+La quatrième de couverture n'est pas ajoutée par défaut, tout le monde n'en
+veux pas. Il faut utiliser la commande `\makefourthcover` pour créer cette
+page, elle sera automatiquement créé sur un verso.
+
+### Packages chargés par défaut
+
+Pour faire les pages de couvertures les packages `tikz` (et la librairie
+`fadings`), `hyperref` et `xcolors`.
 
 ## Contribution
 
