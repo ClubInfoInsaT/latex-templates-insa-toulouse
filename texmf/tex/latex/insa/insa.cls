@@ -27,6 +27,7 @@
 
 \DeclareOption{autre}{%
 	\insa@autretrue%
+	\def\insa@baseclass{article}
 }
 
 \DeclareOption{cours}{%
@@ -122,8 +123,11 @@
 			\node[anchor=north east, align=right, text width=12cm] (titre) at (type.south east) {\LARGE{\insa@titre}};
 			\node[anchor=north east, align=right, text width=12cm] (uf) at (titre.south east) {\insa@uf\\\insa@classe};
 			\node[anchor=center, align=center, text width=12cm] at (0.5\paperwidth,0.2\paperheight) {%
-				Rédigé par: \\%
-					\insa@auteur%
+				\ifx\insa@auteur\empty%
+				\else%
+					Rédigé par: \\%
+						\insa@auteur%
+				\fi
 				\ifx\insa@enseignant\empty%
 				\else%
 					\\%
@@ -138,4 +142,27 @@
 			\node[anchor=north west] at (0.075\paperwidth,0.975\paperheight) {\includegraphics[scale=0.25]{meta/logo_insat.pdf}};
 		\end{tikzpicture}
 	\end{titlepage}
+}
+
+%% 4eme de couverture
+\newcommand{\makefourthcover}{%
+	\clearpage%
+	% Ajout d'une page vide pour toujours avoir la page sur un verso
+	\ifodd\thepage\hbox{}\newpage\else\fi%
+	\pagenumbering{gobble}%
+	\thispagestyle{empty}%
+	\noindent%
+	\begin{tikzpicture}[remember picture, overlay, shift={(current page.south west)}]%
+		\draw[draw=none, path fading=east, left color=insa@bleu, right color=insa@bleu!25!white] (\paperwidth,0.25\paperheight) -- (0.2\paperwidth,0.5425\paperheight) -- (\paperwidth,0.835\paperheight) -- cycle;
+		\draw[draw=none, path fading=east, left color=insa@bleu, right color=insa@bleu!60!white] (0,0.55\paperheight) -- (0.333333333\paperwidth,0.6625\paperheight) -- (0,0.775\paperheight) -- cycle;
+		\draw[draw=none, path fading=east, left color=insa@bleu, right color=insa@bleu!25!white] (0,0.6\paperheight) -- (0.65\paperwidth,0.825\paperheight) -- (0\paperwidth,1.05\paperheight) -- (0,\paperheight) -- cycle;
+
+		\draw[draw=none, fill=insa@rouge] (0.33333\paperwidth,0) -- (0.33333\paperwidth,0.05\paperheight) -- (0.666666\paperwidth,0) -- cycle;
+		
+		\node[anchor=south west, align=left] (adresse) at (0.058\paperwidth,0.12\paperheight) {\textbf{INSA Toulouse}};
+		\node[anchor=north west, align=left] at (adresse.south west) {135, Avenue de Rangueil \\ 31077 Toulouse Cedex 4 - France \\ \href{http://www.insa-toulouse.fr}{www.insa-toulouse.fr}};
+
+		\node[anchor=south west] (ups) at (0.525\paperwidth,0.075\paperheight) {\includegraphics[height=0.04\paperheight, keepaspectratio]{meta/univ.png}};
+		\node[anchor=south west] at (ups.south east) {\includegraphics[height=0.04\paperheight, keepaspectratio]{meta/ministere.png}};
+	\end{tikzpicture}
 }
