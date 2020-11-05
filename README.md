@@ -23,6 +23,9 @@ votre dossier texmf local (si vous avez installé miktex:
 [TEXMF root directory](https://miktex.org/kb/texmf-roots), section
 `Your own TEXMF root directories`, pour texlive c'est le dossier `~/texmf`).
 
+Dans le cas d'overleaf il suffit de copier le contenu du dossier `texmf/tex/latex/insa`
+à la racine de votre projet.
+
 ### Utilisation
 
 Pour l'utilisation il suffit d'utiliser la classe `insa`. Les options
@@ -49,12 +52,14 @@ document (choisi par l'option de chargement)
 rester vide
  - `\auteur` - Défini l'auteur du document, écrit en bas au milieu
  - `\classe` - Défini le niveau correspondant au document
- - `\enseignant` - Défini les enseignants associés aux documents (celui qui fait le cours, organise le TD...)
+ - `\enseignant` - Défini les enseignants associés aux documents (celui qui 
+fait le cours, organise le TD...)
 
 Trois macros sont spécifiques à certaines options:
  - `\numeroTD` - Défini le numéro du TD si la classe est chargée avec l'option `td`
  - `\numeroTP` - Défini le numéro du TP si la classe est chargée avec l'option `tp`
- - `\type` - Permet de définir le type lorsque la classe est chargée avec l'option `autre`
+ - `\type` - Permet de définir le type lorsque la classe est chargée avec l'option
+`autre`
 
 ## Contribution
 
