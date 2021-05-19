@@ -1,18 +1,19 @@
-\documentclass[]{insa} % \documentclass[livret]{insa} %- vertion imprimable recto-verso
-\usepackage{lipsum}
+\documentclass[french]{insa} % \documentclass[livret]{insa} %- version imprimable recto-verso
+\usepackage{babel}           % Pour générer en français
+\usepackage{lipsum}          % Pour générer du texte
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                OPTIONS                    %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\type{Exemple}                      % Type du document (par défault: "Cours")
+\type{Exemple}                      % Type du document (par défaut: "Cours")
 \titre{Démonstration du template}   % Titre du documents
 \auteur{Le club info}               % Auteur du document
-\info{Promo 0\\Année 2000/2001}     % Info suplémentaire
-\date{}                             % Redefinition de la date (par défault: "-  Version du {date du jour}  -")
-\setcolorcustom{138,43,226}         %Pour changer la couleur du theme : 
+\info{Promo 0\\Année 2000/2001}     % Info supplémentaire
+%\date{}                            % Redéfinition de la date (par défaut: "-  Version du {date du jour}  -")
+\setcolorcustom{138,43,226}         %Pour changer la couleur du thème : 
                                     %\setcolorinstitutionnel - \setcolorformation - \setcolorrecherche
-                                    %\setcolorinternational - \setcolorentreprise - \setcolorcampus - \setcolorcustom{<R>,<G>,<B>}
+                                    %\setcolorinternational - \setcolorentreprise - \setcolorcampus
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -21,10 +22,31 @@
 \makecoverpage  % page de garde
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                 DEBUT                     %
+%                 DÉBUT                     %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\tableofcontents
+
+\clearpage
+
 \section{Introduction}
+\lipsum*[1]
+
+\clearpage
+
+\section{Part 1}
+\lipsum
+
+\clearpage
+
+\section{Part 2}
+\lipsum*[1]
+\subsection{Part 2.1}
+\lipsum
+\subsection{Part 2.2}
+\lipsum
+
+\clearpage
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
