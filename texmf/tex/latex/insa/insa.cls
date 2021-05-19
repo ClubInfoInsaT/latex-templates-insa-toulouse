@@ -83,16 +83,14 @@
 
 \definecolor{insa@rouge}{RGB}{228,38,24}
 
-% Defalut color
-\colorlet{insa@color}{insa@institutionnel}
-
 % Color command
-\newcommand{\setcolorinstinstitutionnel}{\colorlet{insa@color}{insa@institutionnel}}
-\newcommand{\setcolorinstformation}{\colorlet{insa@color}{insa@formation}}
-\newcommand{\setcolorinstrecherche}{\colorlet{insa@color}{insa@recherche}}
-\newcommand{\setcolorinstinternational}{\colorlet{insa@color}{insa@international}}
-\newcommand{\setcolorinstentreprise}{\colorlet{insa@color}{insa@entreprise}}
-\newcommand{\setcolorinstcampus}{\colorlet{insa@color}{insa@campus}}
+\newcommand{\setcolorinstitutionnel}{\colorlet{insa@color}{insa@institutionnel}}
+\newcommand{\setcolorformation}{\colorlet{insa@color}{insa@formation}}
+\newcommand{\setcolorrecherche}{\colorlet{insa@color}{insa@recherche}}
+\newcommand{\setcolorinternational}{\colorlet{insa@color}{insa@international}}
+\newcommand{\setcolorentreprise}{\colorlet{insa@color}{insa@entreprise}}
+\newcommand{\setcolorcampus}{\colorlet{insa@color}{insa@campus}}
+\newcommand{\setcolorcustom}[1]{\definecolor{insa@color}{RGB}{#1}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -180,9 +178,9 @@
 	\ifinsa@livret\hbox{}\newpage\fi%
 	\noindent%
 	\begin{tikzpicture}[remember picture, overlay, shift={(current page.south west)}]%
-		\draw[draw=none, path fading=east, left color=insa@bleu, right color=insa@bleu!25!white] (\paperwidth,0.25\paperheight) -- (0.2\paperwidth,0.5425\paperheight) -- (\paperwidth,0.835\paperheight) -- cycle;
-		\draw[draw=none, path fading=east, left color=insa@bleu, right color=insa@bleu!60!white] (0,0.55\paperheight) -- (0.333333333\paperwidth,0.6625\paperheight) -- (0,0.775\paperheight) -- cycle;
-		\draw[draw=none, path fading=east, left color=insa@bleu, right color=insa@bleu!25!white] (0,0.6\paperheight) -- (0.65\paperwidth,0.825\paperheight) -- (0\paperwidth,1.05\paperheight) -- (0,\paperheight) -- cycle;
+		\draw[draw=none, path fading=east, left color=insa@color, right color=insa@color!25!white] (\paperwidth,0.25\paperheight) -- (0.2\paperwidth,0.5425\paperheight) -- (\paperwidth,0.835\paperheight) -- cycle;
+		\draw[draw=none, path fading=east, left color=insa@color, right color=insa@color!60!white] (0,0.55\paperheight) -- (0.333333333\paperwidth,0.6625\paperheight) -- (0,0.775\paperheight) -- cycle;
+		\draw[draw=none, path fading=east, left color=insa@color, right color=insa@color!25!white] (0,0.6\paperheight) -- (0.65\paperwidth,0.825\paperheight) -- (0\paperwidth,1.05\paperheight) -- (0,\paperheight) -- cycle;
 
 		\draw[draw=none, fill=insa@rouge] (0.33333\paperwidth,0) -- (0.33333\paperwidth,0.05\paperheight) -- (0.666666\paperwidth,0) -- cycle;
 		
