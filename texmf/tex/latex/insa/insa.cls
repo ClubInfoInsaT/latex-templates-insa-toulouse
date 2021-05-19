@@ -18,6 +18,10 @@
 \ProcessOptions\relax
 
 \LoadClass{\insa@baseclass}
+\newcommand{\sectionwithoutnumber}[1]{
+    \section*{#1}
+    \addcontentsline{toc}{section}{\protect\numberline{}#1}%
+}
 
 %%Variables
 \newcommand{\insa@titre}{}
@@ -49,7 +53,7 @@
 % if titlefont
 %\newcommand\insa@titlefont{\insa@verbfont}
 % else
-%\newcommand\insa@titlefont{\normalfont}
+\newcommand\insa@titlefont{\normalfont}
 % fi
 %
 % if documentfont
@@ -92,6 +96,51 @@
 \newcommand{\setcolorcampus}{\colorlet{insa@color}{insa@campus}}
 \newcommand{\setcolorcustom}[1]{\definecolor{insa@color}{RGB}{#1}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Annexes                                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{minitoc}
+\newcommand{\annexes}[1]{
+    \clearpage
+    \sectionwithoutnumber{#1}
+    \appendix
+    \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+    \renewcommand{\stctitle}{} % Titre
+    \renewcommand\thesubsection{\Alph{subsection}} % Numérotation
+    \renewcommand{\stcSSfont}{} % Police normale, pas en gras
+    \mtcsetrules{secttoc}{off} % Désactivation des lignes en haut et en bas de la table
+    \secttoc
+    \clearpage
+    \pagenumbering{Roman}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Entête                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{fancyhdr}
+%\RequirePackage{lastpage}
+
+\newcommand{\pieddepage}{
+    \renewcommand\footrulewidth{1pt}
+    \fancyfoot[L]{}
+    \fancyfoot[C]{Page \thepage}
+    \fancyfoot[R]{}
+}
+
+\newcommand{\entete}{
+    \renewcommand\headrulewidth{1pt}
+    \fancyhead[L]{}
+    \fancyhead[C]{\textbf{\insa@type} : \insa@titre}
+    \fancyhead[R]{}
+}
+
+\newcommand{\enteteanexe}{
+    \renewcommand{\subsectionmark}[1]{\markboth{##1}{}} 
+    \renewcommand\headrulewidth{1pt}
+    \fancyhead[L]{}
+    \fancyhead[C]{\textbf{Annexe \Alph{subsection}} : \leftmark}
+    \fancyhead[R]{}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Pages                                          %
@@ -132,7 +181,7 @@
 	\end{titlepage}
 	\thispagestyle{empty}%
 	\ifinsa@livret\hbox{}\newpage\fi%
-	\thispagestyle{plain}%
+	\thispagestyle{fancy}%
 }
 
 %% Page de garde
@@ -164,7 +213,7 @@
 	\hbox{}\newpage
 	\thispagestyle{empty}%
 	\ifinsa@livret\hbox{}\newpage\fi%
-	\thispagestyle{plain}%
+	\thispagestyle{fancy}%
 	\setcounter{page}{1}
 }
 
