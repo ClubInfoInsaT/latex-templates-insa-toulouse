@@ -1,9 +1,13 @@
-\documentclass[french]{insa} % \documentclass[livret]{insa} %- version imprimable recto-verso
-\usepackage{babel}           % Pour générer en français
+\documentclass[a4paper,12pt]{insa} % \documentclass[livret]{insa} %- version imprimable recto-verso
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
 \usepackage{lipsum}          % Pour générer du texte
+\usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                OPTIONS                    %
+% OPTIONS                                   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \type{Exemple}                      % Type du document (par défaut: "Cours")
@@ -16,20 +20,22 @@
                                     %\setcolorinternational - \setcolorentreprise - \setcolorcampus
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% DÉBUT                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\maketitle      % Page de couverture
-\makecoverpage  % page de garde
+\dosecttoc{}	  % Sert à générer la table des annexes
+\pagestyle{fancy} % Sert à générer les entête et pied de page
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                 DÉBUT                     %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\maketitle        % Page de couverture
+\makecoverpage    % page de garde
+\entete           % entête
+\pieddepage       % pied de page
 
 \tableofcontents
 
 \clearpage
 
-\section{Introduction}
+\sectionwithoutnumber{Introduction}
 \lipsum*[1]
 
 \clearpage
@@ -48,9 +54,31 @@
 
 \clearpage
 
+\section{Part 3}
+\lipsum*[1]
+
+\clearpage
+
+\sectionwithoutnumber{Conclusion}
+\lipsum*[1]
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                  FIN                      %
+% ANNEXE                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\annexes{Table des annexes}
+\enteteanexe
+
+\subsection{Lorem 1}
+\lipsum
+
+\clearpage
+
+\subsection{Lorem 2}
+\lipsum
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FIN                                       %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \makefourthcover    % Quatrième de couverture
