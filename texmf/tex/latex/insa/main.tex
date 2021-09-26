@@ -1,0 +1,85 @@
+\documentclass[a4paper,12pt]{insa} % \documentclass[livret]{insa} %- version imprimable recto-verso
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+\usepackage{lipsum}          % Pour générer du texte
+\usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% OPTIONS                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\type{Exemple}                      % Type du document (par défaut: "Cours")
+\titre{Démonstration du template}   % Titre du documents
+\auteur{Le club info}               % Auteur du document
+\info{Promo 0\\Année 2000/2001}     % Info supplémentaire
+%\date{}                            % Redéfinition de la date (par défaut: "-  Version du {date du jour}  -")
+\setcolorcustom{138,43,226}         %Pour changer la couleur du thème : 
+                                    %\setcolorinstitutionnel - \setcolorformation - \setcolorrecherche
+                                    %\setcolorinternational - \setcolorentreprise - \setcolorcampus
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DÉBUT                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\dosecttoc{}	  % Sert à générer la table des annexes
+\pagestyle{fancy} % Sert à générer les entête et pied de page
+
+\maketitle        % Page de couverture
+\makecoverpage    % page de garde
+\entete           % entête
+\pieddepage       % pied de page
+
+\tableofcontents
+
+\clearpage
+
+\sectionwithoutnumber{Introduction}
+\lipsum*[1]
+
+\clearpage
+
+\section{Part 1}
+\lipsum
+
+\clearpage
+
+\section{Part 2}
+\lipsum*[1]
+\subsection{Part 2.1}
+\lipsum
+\subsection{Part 2.2}
+\lipsum
+
+\clearpage
+
+\section{Part 3}
+\lipsum*[1]
+
+\clearpage
+
+\sectionwithoutnumber{Conclusion}
+\lipsum*[1]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ANNEXE                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\annexes{Table des annexes}
+\enteteanexe
+
+\subsection{Lorem 1}
+\lipsum
+
+\clearpage
+
+\subsection{Lorem 2}
+\lipsum
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FIN                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makefourthcover    % Quatrième de couverture
+\end{document}
