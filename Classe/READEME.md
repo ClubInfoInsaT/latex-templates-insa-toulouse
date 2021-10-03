@@ -98,4 +98,5 @@ Pour faire les pages de couvertures les packages `tikz` (et la librairie
 `fadings`), `hyperref` et `xcolors`.
 
 Pour la gestion des annexes le package `minitoc`.
+
 Pour faire les entête et pied de page le package `fancyhdr`
