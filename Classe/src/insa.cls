@@ -47,9 +47,9 @@
 %            LetterSpace=6,%
 %            WordSpace=1.5,
 %            NFSSFamily=insafont]
-%          
-%          
-% TODO  
+%
+%
+% TODO
 % if titlefont
 %\newcommand\insa@titlefont{\insa@verbfont}
 % else
@@ -135,7 +135,7 @@
 }
 
 \newcommand{\enteteanexe}{
-    \renewcommand{\subsectionmark}[1]{\markboth{##1}{}} 
+    \renewcommand{\subsectionmark}[1]{\markboth{##1}{}}
     \renewcommand\headrulewidth{1pt}
     \fancyhead[L]{}
     \fancyhead[C]{\textbf{Annexe \Alph{subsection}} : \leftmark}
@@ -156,9 +156,7 @@
 			\draw[draw=none, path fading=east, left color=insa@color, right color=insa@color!10!white] (0,0.35\paperheight) -- (0.7\paperwidth,0.6125\paperheight) -- (0,0.875\paperheight) -- cycle;
 			\draw[draw=none, path fading=east, left color=insa@color, right color=insa@color!25!white] (\paperwidth,0.54\paperheight) -- (0.675\paperwidth,0.661875\paperheight) -- (\paperwidth,0.78375\paperheight) -- cycle;
 			\draw[draw=none, path fading=east, left color=insa@color, right color=insa@color!60!white] (\paperwidth,0.58\paperheight) -- (0.35\paperwidth,0.82375\paperheight) -- (\paperwidth,1.0675\paperheight) -- cycle;
-			
 			\draw[draw=none, fill=insa@rouge] (0.33333\paperwidth,0) -- (0.33333\paperwidth,0.075\paperheight) -- (0.666666\paperwidth,0) -- cycle;
-			
 			\node[anchor=south east, align=right, text width=12cm] (type) at (0.975\paperwidth,0.425\paperheight)
 			    {\insa@titlefont\textbf{\Huge{\insa@type}}};
 			\node[anchor=north east, align=right, text width=12cm] (titre) at (type.south east) {\insa@titlefont\huge{\insa@titre}};
@@ -189,8 +187,6 @@
 	\thispagestyle{empty}
 	\noindent%
 	\begin{tikzpicture}[remember picture,overlay,shift={(current page.south west)}]%
-		
-		
 		\node[anchor=south east, align=right, text width=12cm] (type) at (0.975\paperwidth,0.425\paperheight)
 		    {\insa@titlefont\textbf{\Huge{\insa@type}}};
 		\node[anchor=north east, align=right, text width=12cm] (titre) at (type.south east) {\insa@titlefont\huge{\insa@titre}};
@@ -218,7 +214,7 @@
 }
 
 %% 4eme de couverture
-\newcommand{\makefourthcover}{%
+\gdef\makefourthcover{%
 	\clearpage%
 	% Ajout d'une page vide pour toujours avoir la page sur un verso
 	\ifodd\thepage\else\hbox{}\newpage\fi%
@@ -232,7 +228,7 @@
 		\draw[draw=none, path fading=east, left color=insa@color, right color=insa@color!25!white] (0,0.6\paperheight) -- (0.65\paperwidth,0.825\paperheight) -- (0\paperwidth,1.05\paperheight) -- (0,\paperheight) -- cycle;
 
 		\draw[draw=none, fill=insa@rouge] (0.33333\paperwidth,0) -- (0.33333\paperwidth,0.05\paperheight) -- (0.666666\paperwidth,0) -- cycle;
-		
+
 		\node[anchor=south west, align=left] (adresse) at (0.058\paperwidth,0.12\paperheight) {\insa@titlefont\textbf{INSA Toulouse}};
 		\node[anchor=north west, align=left] at (adresse.south west) {\insa@titlefont135, Avenue de Rangueil \\ 31077 Toulouse Cedex 4 - France \\ \href{http://www.insa-toulouse.fr}{www.insa-toulouse.fr}};
 
