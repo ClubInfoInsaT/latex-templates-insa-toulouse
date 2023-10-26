@@ -5,18 +5,17 @@
 
 ## Templates latex
 
-Vous trouverez différent templates pour vos diférent projet dans [le dossier Templates](./Templates/).
+Vous trouverez différents templates pour vos différents projets dans [le dossier Templates](./Templates/).
 
 ## Classe latex
-
 
 Vous trouverez une classe latex avec sa documentation reprenant la charte graphique INSA [le dossier Classe](./Classe/).
 
 ## Contribution
 
-Nous acceuillons toute remarque ou suggestion d'amélioration concernants ces templates.
+Nous accueillons toute remarque ou suggestion d'amélioration concernant ces templates.
 
-Si vous avez créé une template qui n'est pas encore listée ici, n'hésitez pas à nous envoyer une pull request.
+Si vous avez créé un template qui n'est pas encore listé ici, n'hésitez pas à nous envoyer une pull request.
 
 ## Licenses
 
