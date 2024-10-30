@@ -1,0 +1,25 @@
+\newpage
+\appendix
+\thispagestyle{empty}
+\psection{Table des annexes}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}} % Désactivation de la table des matières
+
+% Personnalisation de la table des annexes
+\renewcommand{\stctitle}{}                          % Titre (issue with previous subsection showing up)
+\renewcommand\thesubsection{A\arabic{subsection}}   % Numérotation
+\renewcommand{\stcSSfont}{}                         % Police normale, pas en gras
+\mtcsetrules{secttoc}{off}                          % Désactivation des lignes en haut et en bas de la table
+
+% Affichage de la table des annexes
+\secttoc
+
+
+\newpage
+% Annexe 1
+\subsection{Annexe A}
+Contenu de l'annexe A.
+
+\newpage
+% Annexe 2
+\subsection{Annexe B}
+Contenu de l'annexe B.

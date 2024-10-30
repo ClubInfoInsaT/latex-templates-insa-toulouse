@@ -1,0 +1,41 @@
+\usepackage{graphicx, pdfpages, tikz, hyperref, fancyhdr,  geometry, titlesec, xcolor, csquotes, tocloft, minitoc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% marges du document
+\geometry{
+    left=3cm,
+    right=3cm,
+    top=2cm,
+    bottom=3.5cm
+}
+
+\pagestyle{fancy}
+\fancyhf{} % retirer config de page par défaut
+\renewcommand{\headrulewidth}{0pt} % Supprimer la ligne d'en-tête
+
+\fancyfoot[R]{\thepage} % numéro de page à droite
+\fancyfoot[L]{{\itshape \titre}} % numéro de page à droite
+
+\newcommand\BackgroundPic{
+    \put(0,0){
+        \includegraphics[width=\paperwidth,height=\paperheight]{template/assets/template_page.pdf}
+    }
+}
+
+\titleformat{\section}
+  {\LARGE\bfseries\uppercase} % Mise en forme (centré, taille, gras, en majuscule)
+  {\thesection}{1em}{} % Numérotation
+
+\newcommand{\psection}[1]{\phantomsection\section*{#1}\addcontentsline{toc}{section}{#1}}
+
+\newcommand{\aremplir}{{\LARGE \bfseries \textcolor{red}{A REMPLIR}}}
+
+\addto\captionsfrench{
+    \renewcommand{\listfigurename}{Liste des figures}%
+    \renewcommand{\listtablename}{Liste des tableaux}%
+}
+
+\newenvironment{custombox}[1]{% environnement qui permet le retour à la ligne quand ça déborde
+    \begin{minipage}{#1}
+}{\end{minipage}}

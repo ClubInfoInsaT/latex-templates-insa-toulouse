@@ -3,13 +3,11 @@
 ![](banner.png)
 
 
-## Templates latex
+## Template latex
 
-Vous trouverez différents templates pour vos différents projets dans [le dossier Templates](./Templates/).
+Vous trouverez une template pour vos différents projets dans [le dossier Templates](./Templates/).
 
-## Classe latex
-
-Vous trouverez une classe latex avec sa documentation reprenant la charte graphique INSA [le dossier Classe](./Classe/).
+Copier le dossier "Templates" dans overleaf (ou autre éditeur LaTeX) puis suivez le [readme](./Templates/README.md)
 
 ## Contribution
 

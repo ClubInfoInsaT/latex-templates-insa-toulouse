@@ -1,0 +1,64 @@
+\documentclass[11pt]{article}
+\input{template/preambule} % ne pas toucher
+
+\newcommand{\titre}{Nom du document}
+\newcommand{\imagecouverture}{example-image}
+\newcommand{\firstcouverture}{
+    \parbox{\textwidth}{
+        \textbf{Prénom NOM}\\
+        Elève Ingénieur de l'INSA Toulouse\\
+        Département XX\\
+        Spécialité TLS-SEC\\
+        Promotion XX\\
+        20XX-20XX
+    }
+}
+\newcommand{\secondcouverture}{
+    \parbox{\textwidth}{
+        \begin{custombox}{9cm}
+            \textbf{INTITULE ICI - EXEMPLE : CONTRIBUTION A LA CONCEPTION A BAS COUT D’ANTENNES 3D}
+            \vspace{1em}\\
+            \textbf{Lieu du Projet de Fin d'Études ou stage}\\
+            Nom de l’entreprise\\
+            Adresse de l’entreprise
+            \vspace{0.6em}\\
+            \textbf{Tuteur du Projet (ou PFE)...}\\
+            Prénom NOM du Tuteur du Projet de Fin d'Étude
+            \vspace{0.6em}\\
+            \textbf{Correspondant pédagogique INSA}\\
+            Prénom NOM du Correspondant pédagogique INSA
+            \vspace{0.6em}\\
+            \textbf{PFE/Stage/Projet soutenu le 00/00/20XX}
+        \end{custombox}
+    }
+}
+
+% bibliographie
+\usepackage{biblatex}
+\addbibresource{contents/bibliography.bib}
+
+
+\begin{document}
+    \input{template/premiere_page} % ne pas toucher
+    \input{template/page_garde}
+    
+    % commentez les sections qui ne vous concernent pas
+    \input{contents/confidentiel}
+    \input{contents/remerciements}
+    \input{contents/abstract}
+    
+    \input{template/table_des_matieres} % ne pas toucher
+    
+    % début du contenu
+    \input{contents}
+    
+    % commentez les sections qui ne vous concernent pas
+    \input{contents/biblio}
+    \input{contents/lexique}
+    \input{contents/figures}
+    
+    % annexes
+    \input{contents/annexes}
+    
+    \input{template/derniere_page} % ne pas toucher
+\end{document}
