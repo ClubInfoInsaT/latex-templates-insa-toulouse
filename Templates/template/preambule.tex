@@ -1,4 +1,4 @@
-\usepackage{graphicx, pdfpages, tikz, hyperref, fancyhdr,  geometry, titlesec, xcolor, csquotes, tocloft, minitoc}
+\usepackage{graphicx, pdfpages, tikz, hyperref, fancyhdr,  geometry, titlesec, xcolor, csquotes, tocloft, minitoc, helvet}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
 
@@ -23,9 +23,19 @@
     }
 }
 
+% redéfinie les sections
 \titleformat{\section}
-  {\LARGE\bfseries\uppercase} % Mise en forme (centré, taille, gras, en majuscule)
-  {\thesection}{1em}{} % Numérotation
+  {\sffamily\LARGE\bfseries\MakeUppercase} % Arial like, grand, gras et majuscule
+  {\thesection}{1em}{}
+
+% redéfinie les sous-sections
+\titleformat{\subsection}
+  {\Large\bfseries} % Définit la taille à \large et en gras
+  {\thesubsection}{1em}{}
+
+\renewcommand{\contentsname}{{\sffamily\LARGE\bfseries\MakeUppercase TABLE OF CONTENTS}}
+\addto\captionsfrench{\renewcommand{\contentsname}{\sffamily\LARGE\bfseries\MakeUppercase SOMMAIRE}}
+
 
 \newcommand{\psection}[1]{\phantomsection\section*{#1}\addcontentsline{toc}{section}{#1}}
 

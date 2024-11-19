@@ -1,10 +1,13 @@
 \documentclass[11pt]{article}
 \input{template/preambule} % ne pas toucher
 
+\renewcommand{\familydefault}{\sfdefault} % Si vous voulez passer en Arial le texte
+
 \newcommand{\titre}{Nom du document}
 \newcommand{\imagecouverture}{example-image}
 \newcommand{\firstcouverture}{
     \parbox{\textwidth}{
+        \sffamily % arial
         \textbf{Prénom NOM}\\
         Elève Ingénieur de l'INSA Toulouse\\
         Département XX\\
@@ -16,6 +19,7 @@
 \newcommand{\secondcouverture}{
     \parbox{\textwidth}{
         \begin{custombox}{9cm}
+            \sffamily % arial
             \textbf{INTITULE ICI - EXEMPLE : CONTRIBUTION A LA CONCEPTION A BAS COUT D’ANTENNES 3D}
             \vspace{1em}\\
             \textbf{Lieu du Projet de Fin d'Études ou stage}\\

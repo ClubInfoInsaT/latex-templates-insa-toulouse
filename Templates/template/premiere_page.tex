@@ -2,16 +2,22 @@
 \pagenumbering{Roman} % Numérotation en chiffres romains (i, ii, iii, ...)
 \setcounter{page}{1}
 
+\definecolor{couleurcarre}{HTML}{F3F0EC} 
+
 \thispagestyle{empty} % pas de numéro de page sur cette page
 \begin{tikzpicture}[remember picture, overlay]
     \node[anchor=south west, inner sep=0] at (current page.south west) {
         \includegraphics[width=\paperwidth,height=\paperheight]{template/assets/template_first_page.pdf}
     };
+    
+    \fill[fill=couleurcarre]([xshift=-4.7cm, yshift=-4.5cm]current page.north east) rectangle ++(3.5cm, 3.5cm);
+    
     % Ajouter du texte à une position spécifique
-    \node at (2.8, -4) {\LARGE \bfseries \MakeUppercase{\titre}};
+    \node at (2.1, -4) {\LARGE \bfseries \MakeUppercase{\sffamily \titre}};
     \node at (6.8, -7) {\large \firstcouverture};
     \node at (6.8, -17) {\secondcouverture};
-    \node at (11.5, -12.2) {\includegraphics[height=3cm]{\imagecouverture}};
+    %\node at (11.5, -12.2) {\includegraphics[height=3cm]{\imagecouverture}};
+    \node at (15.05, -0.3) {\includegraphics[width=3cm]{\imagecouverture}};
 \end{tikzpicture}
 \newpage
 \AddToShipoutPicture{\BackgroundPic} 
