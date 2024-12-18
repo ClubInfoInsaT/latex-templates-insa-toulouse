@@ -14,8 +14,8 @@
 
 %Chapter No Numbering but appears in TOC
 \newcommand{\chapternn}[1]{\phantomsection{}\chapter*{#1}\addcontentsline{toc}{chapter}{#1}}
-\newcommand{\sectionnn}[1]{\phantomsection{}\section*{#1}\addcontentsline{toc}{section}{#1}}
-\newcommand{\subsectionnn}[1]{\phantomsection{}\subsection*{#1}\addcontentsline{toc}{subsection}{#1}}
+\newcommand{\sectionnn}[1]{\phantomsection{}\section*{#1}\addcontentsline{toc}{section}{#1}\setcounter{subsection}{0}}
+\newcommand{\subsectionnn}[1]{\phantomsection{}\subsection*{#1}\addcontentsline{toc}{subsection}{#1}\setcounter{subsubsection}{0}}
 \newcommand{\subsubsectionnn}[1]{\phantomsection{}\subsubsection*{#1}\addcontentsline{toc}{subsubsection}{#1}}
 
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash\hspace{0pt}}p{#1}}
