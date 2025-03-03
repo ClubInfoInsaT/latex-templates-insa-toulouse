@@ -1,0 +1,12 @@
+\begin{tikzpicture}[remember picture, overlay]
+  
+    \fill[fill=couleurcarre]([xshift=-4.7cm, yshift=-4.5cm]current page.north east) rectangle ++(3.5cm, 3.5cm);
+    
+    % Ajouter du texte à une position spécifique
+    \node at (2.1, -4) {\LARGE \bfseries \MakeUppercase{\sffamily \titre}};
+    \node at (6.8, -7) {\large \firstcouverture};
+    \node at (6.8, -17) {{\sffamily\secondcouverture}};
+    %\node at (11.5, -12.2) {\includegraphics[height=3cm]{\imagecouverture}};
+    \node at (15.05, -0.3) {\includegraphics[width=3cm]{\imagecouverture}};
+\end{tikzpicture}
+\newpage
