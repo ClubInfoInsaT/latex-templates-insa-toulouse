@@ -1,0 +1,119 @@
+\documentclass{INSAToulouse}
+
+\renewcommand{\familydefault}{\sfdefault} % Police Arial-like
+
+\usepackage{listings, xcolor, array, pgfgantt, lmodern, multirow, tabularx, colortbl, adjustbox}
+\usetikzlibrary{positioning, fit, backgrounds, arrows.meta, decorations.pathreplacing, shapes.multipart, calc}
+\definecolor{mainred}{HTML}{FF4C4C}
+
+
+% ── À remplir ────────────────────────────────────────────────────────────────
+\titre{PROJET DE FIN D'ÉTUDES}
+\imagecouverture{example-image}
+
+%\enabletlssec % à décommenter pour les TLS-SEC
+
+\firstcouverture{
+    \parbox{\textwidth}{
+        \sffamily
+        \textbf{BigD}\\
+        Informatique et Réseaux\\
+        Département GEI\\
+        Spécialité TLS-SEC\\
+        Promotion 59
+    }
+}
+
+\secondcouverture{
+    \parbox{\textwidth}{
+        \begin{custombox}{9cm}
+            \sffamily
+            \textbf{DÉVELOPPEMENT D'UN SYSTEME DE CHIFFREMENT BASÉ SUR LE PUR HASARD}
+            \vspace{1.5em}\\
+            %\textbf{Lieu du PFE}\\
+            Bullshit corp\\
+            15 Avenue du papillon\\
+            31400 Toulouse
+            \vspace{1em}\\
+            \textbf{Tuteur d'alternance}\\
+            Tic
+            \vspace{1em}\\
+            \textbf{Correspondant pédagogique INSA}\\
+            Tac
+            \vspace{1em}\\
+            \textbf{Soutenance du PFE le 3/09/2026}
+        \end{custombox}
+    }
+}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\usepackage{biblatex}
+\addbibresource{bibliography.bib}
+
+% ── Glossaire ─────────────────────────────────────────────────────────────────
+% Ajouter vos définitions ici, puis utiliser \gls{cle} dans le texte
+\input{glossary}
+% ─────────────────────────────────────────────────────────────────────────────
+\makeglossaries  % doit être dans le préambule, avant \begin{document}
+
+\begin{document}
+
+    \makecover          % page de couverture (fond PDF INSA)
+    \makepagegarde      % page de garde intérieure
+
+    \pchapter{Résumé}
+    blabla
+
+    \clearpage
+
+    \pchapter{Remerciements}
+    blabla
+    
+    \clearpage
+
+    \pchapter{Note sur l'utilisation d'outils externes}
+    j'ai utilisé l'IA, blabla
+    \clearpage
+
+    \makebackmatter     % liste des figures + liste des tableaux
+    \makeglossaire      % lexique / glossaire
+
+    \clearpage
+    
+    \makesommaire       % table des matières + passage en numérotation arabe
+
+    %%%%%%%%%%%%%%%%%%%%%%%
+    %% INTRODUCTION :    %%
+    %%%%%%%%%%%%%%%%%%%%%%%
+    \pchapter{Introduction}
+    blabla
+    oui y'a une \gls{pki}
+
+    %%%%%%%%%%%%%%%%%%%%%%%
+    %% CHAPTER 1    :    %%
+    %%%%%%%%%%%%%%%%%%%%%%%
+    \chapter{J'explique le hasard}
+    \section{Explication physique}
+    \section{Faut être très précis}
+    \section{Explication bancale}
+    jador l'ANSSI et surtout l'ii901\cite{ii901}
+    
+    %%%%%%%%%%%%%%%%%%%%%%
+    %% CONCLUSIONS :    %%
+    %%%%%%%%%%%%%%%%%%%%%%
+    \pchapter{Conclusion}
+
+
+    % appendix etc
+    \appendix
+    \chapter{voici une annexe}
+    blabla
+
+    
+    % bibliographie
+    \clearpage
+    \printbibliography[heading=bibintoc, title={Bibliographie}]
+    
+    \makebackcover      % dernière page (fond PDF INSA)
+
+\end{document}

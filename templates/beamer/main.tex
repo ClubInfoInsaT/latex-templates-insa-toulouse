@@ -1,0 +1,69 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage{beamerINSAToulouse} % charge le thème
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+
+\renewcommand{\familydefault}{\sfdefault} %ARIAL
+
+\title{Soutenance de PFE}
+\subtitle{Développement d'un système de chiffrement\\basé sur le pur hasard}
+\author{Baptiste Rébillard}
+\date{\today}
+
+%\enabletlssec % à décommenter pour les TLS-SEC
+
+\begin{document}
+
+\maketitleframe
+
+% Sommaire
+\begin{frame}
+    \backgroundnormal
+    \frametitle{Sommaire}
+    \tableofcontents
+\end{frame}
+
+\section{Intro des trucs}
+% --- Slides normales ---
+{
+  \backgroundnormal
+  \begin{frame}
+    \frametitle{Contenu 1}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\linewidth]{example-image}
+        \caption{Caption}
+        \label{fig:placeholder}
+    \end{figure}
+  \end{frame}
+}
+
+\section{Y'a une autre partie}
+\subsection{Avec une autre sous partie}
+{
+  \backgroundnormal
+  \begin{frame}
+    \frametitle{Contenu 2}
+    \begin{itemize}
+        \item point 1
+        \item point 2
+        \item point 3
+    \end{itemize}
+
+    \begin{enumerate}
+        \item enumération point 1
+        \item enumération point 2
+    \end{enumerate}
+  \end{frame}
+}
+
+% --- Dernière page ---
+{
+  \backgroundfinal
+  \begin{frame}[plain]
+    \vfill
+  \end{frame}
+}
+
+\end{document}
+

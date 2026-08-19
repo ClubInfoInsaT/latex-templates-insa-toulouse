@@ -1,0 +1,130 @@
+%% -----------------------------------------------------------------
+%% beamerINSAToulouse.cls
+%% Description : Classe Beamer pour l'INSA Toulouse
+%% Auteur : Baptiste Rébillard <rebillar@insa-toulouse.fr>
+%% Dépôt : https://github.com/ClubInfoInsaT/latex-templates-insa-toulouse
+%% License : GNU General Public License v2.0
+%% -----------------------------------------------------------------
+\ProvidesPackage{beamerINSAToulouse}[2026/08/19 Custom beamer theme for INSA Toulouse slides]
+
+\RequirePackage{tikz}
+\RequirePackage{graphicx}
+\RequirePackage{eso-pic}
+\RequirePackage{etoolbox}
+
+\newbool{showtlssec}
+\boolfalse{showtlssec}
+\newcommand{\enabletlssec}{\booltrue{showtlssec}}
+
+\newcommand{\backgroundfile}{background.pdf}
+
+% delete le fond blanc de Beamer
+\setbeamercolor{background canvas}{bg=}
+
+% retirer les elements de navigation BEAMER
+\setbeamertemplate{navigation symbols}{}
+
+\newcommand{\setbackgroundpage}[1]{%
+  \AddToShipoutPictureBG*{%
+    \put(0,0){%
+      \parbox[b][\paperheight]{\paperwidth}{%
+        \includegraphics[width=\paperwidth,height=\paperheight,page=#1]{\backgroundfile}%
+      }%
+    }%
+  }%
+}
+
+\newcommand{\backgroundtitle}{\setbackgroundpage{1}}
+\newcommand{\backgroundnormal}{\setbackgroundpage{2}}
+\newcommand{\backgroundfinal}{\setbackgroundpage{3}}
+
+% Définition des couleurs
+\definecolor{RedFlash}{RGB}{227, 27, 23}
+\definecolor{SubTitleColor}{HTML}{F69F1D} % Orange
+
+\setbeamercolor{frametitle}{fg=RedFlash, bg=}
+\setbeamerfont{frametitle}{size=\Large,series=\bfseries}
+
+% --- Couleurs du sommaire et des listes ---
+\setbeamercolor{section in toc}{fg=RedFlash}
+\setbeamercolor{subsection in toc}{fg=black}
+\setbeamercolor{section number projected}{bg=RedFlash, fg=white}
+\setbeamercolor{subsection number projected}{bg=SubTitleColor, fg=white}
+
+% Couleurs des puces
+\setbeamercolor{itemize item}{fg=RedFlash}
+\setbeamercolor{itemize subitem}{fg=SubTitleColor}
+\setbeamercolor{enumerate item}{fg=RedFlash}
+\setbeamercolor{enumerate subitem}{fg=SubTitleColor}
+% ----------------------------------------------------
+
+% placement du titre
+\setbeamertemplate{frametitle}{%
+  \vspace{0.8em} % au-dessus
+  \nointerlineskip
+  \begin{flushleft}
+    \hspace{0.3em} % à gauche
+    \usebeamercolor[fg]{frametitle}%
+    \usebeamerfont{frametitle}%
+    \insertframetitle%
+  \end{flushleft}
+  \vspace{0.5em} % en-dessous
+}
+
+\newcommand{\maketitleframe}{%
+  {
+    \backgroundtitle
+    \begin{frame}[plain]
+      \color{white}
+      \begin{flushleft}
+        \vspace{1em}
+        {\huge \textbf{\inserttitle}} \\[1ex]
+        {\Large \textcolor{white}{\textit{\insertsubtitle}}}      
+      \end{flushleft}
+
+      \begin{tikzpicture}[remember picture,overlay]
+        % Bloc auteur et date (bas gauche)
+        \node[anchor=south west, fill=white, text=black, xshift=0.5cm, yshift=0.5cm, inner sep=8pt, align=left] at (current page.south west) {%
+          {\Large \insertauthor} \\[1ex]
+          {\small \insertdate}
+        };
+        
+        % LOGO TLS-SEC
+        \ifbool{showtlssec}{%
+            \node[anchor=east, xshift=-2cm, yshift=2.9cm] at (current page.east) {%
+              \includegraphics[height=2cm]{tls-sec-logos/tls-sec.png}
+            };
+            \node[anchor=south, xshift=0cm, yshift=0.3cm] at (current page.south) {%
+              \includegraphics[height=0.5cm]{tls-sec-logos/n7.png}\hspace{0.5em}
+              \includegraphics[height=0.5cm]{tls-sec-logos/insa.png}\hspace{0.5em}
+              \includegraphics[height=0.5cm]{tls-sec-logos/enac.png}
+            };
+        }{}
+      \end{tikzpicture}
+      
+    \end{frame}
+  }
+}
+
+% --- Section/Sous-section et Numéro de page ---
+\setbeamertemplate{footline}{%
+  \begin{beamercolorbox}[ht=0.6cm,dp=0.3cm]{}%
+    \begin{tikzpicture}[remember picture,overlay]
+      % Titre de partie / sous-partie (bas gauche)
+      \node[anchor=south west, xshift=0.2cm, yshift=0.2cm] at (current page.south west) {%
+        \color{SubTitleColor}\itshape\footnotesize
+        \ifx\insertsection\empty\else
+          \insertsection
+          \ifx\insertsubsection\empty\else
+            \ $\triangleright$\ \insertsubsection
+          \fi
+        \fi
+      };
+      
+      % Numéro de slide (bas droite)
+      \node[anchor=south east, xshift=-0.2cm, yshift=0.2cm] at (current page.south east) {%
+        \color{white}\scriptsize \insertframenumber{}
+      };
+    \end{tikzpicture}%
+  \end{beamercolorbox}%
+}

@@ -1,13 +1,10 @@
 # LaTeX templates et classe pour l'INSA de Toulouse
 
-![](banner.png)
-
-
 ## Template latex
 
-Vous trouverez une template pour vos différents projets dans [le dossier Templates](./Templates/).
+La template de rapport se trouve dans [le dossier templates/report](./templates/report).
 
-Copier le dossier "Templates" dans overleaf (ou autre éditeur LaTeX) puis suivez le [readme](./Templates/README.md)
+La template beamer se trouve dans [le dossier templates/report](./templates/beamer).
 
 ## Contribution
 
@@ -18,4 +15,3 @@ Si vous avez créé un template qui n'est pas encore listé ici, n'hésitez pas 
 ## Licenses
 
 Ce projet est mis à disposition sous licence GPLv2.0.
-
