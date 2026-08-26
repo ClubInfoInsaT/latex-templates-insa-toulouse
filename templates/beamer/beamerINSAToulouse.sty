@@ -10,6 +10,11 @@
 \RequirePackage{tikz}
 \RequirePackage{graphicx}
 \RequirePackage{eso-pic}
+\RequirePackage{etoolbox}
+
+\newbool{showtlssec}
+\boolfalse{showtlssec}
+\newcommand{\enabletlssec}{\booltrue{showtlssec}}
 
 \newcommand{\backgroundfile}{background.pdf}
 
@@ -85,14 +90,16 @@
         };
         
         % LOGO TLS-SEC
-        \node[anchor=east, xshift=-2cm, yshift=2.9cm] at (current page.east) {%
-          \includegraphics[height=2cm]{tls-sec-logos/tls-sec.png}
-        };
-        \node[anchor=south, xshift=0cm, yshift=0.3cm] at (current page.south) {%
-          \includegraphics[height=0.5cm]{tls-sec-logos/n7.png}\hspace{0.5em}
-          \includegraphics[height=0.5cm]{tls-sec-logos/insa.png}\hspace{0.5em}
-          \includegraphics[height=0.5cm]{tls-sec-logos/enac.png}
-        };
+        \ifbool{showtlssec}{%
+            \node[anchor=east, xshift=-2cm, yshift=2.9cm] at (current page.east) {%
+              \includegraphics[height=2cm]{tls-sec-logos/tls-sec.png}
+            };
+            \node[anchor=south, xshift=0cm, yshift=0.3cm] at (current page.south) {%
+              \includegraphics[height=0.5cm]{tls-sec-logos/n7.png}\hspace{0.5em}
+              \includegraphics[height=0.5cm]{tls-sec-logos/insa.png}\hspace{0.5em}
+              \includegraphics[height=0.5cm]{tls-sec-logos/enac.png}
+            };
+        }{}
       \end{tikzpicture}
       
     \end{frame}
@@ -137,8 +144,10 @@
     \begin{frame}[plain]
         \backgroundnormal
         \vspace{0.5cm}
+        % Titre de la section
+        %{\color{RedFlash}\rule{4cm}{1.5pt}}\\[0.5cm]
         {\huge \bfseries \textcolor{RedFlash}{\thesection.} \textcolor{black}{\insertsection}}\\[0.1cm]
-        {\color{RedFlash}\rule{4cm}{1.5pt}}\\
+        {\color{RedFlash}\rule{4cm}{1.5pt}}\\%[0.8cm]
         
         \centering
         
