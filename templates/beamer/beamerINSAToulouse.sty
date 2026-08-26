@@ -5,16 +5,11 @@
 %% Dépôt : https://github.com/ClubInfoInsaT/latex-templates-insa-toulouse
 %% License : GNU General Public License v2.0
 %% -----------------------------------------------------------------
-\ProvidesPackage{beamerINSAToulouse}[2026/08/19 Custom beamer theme for INSA Toulouse slides]
+\ProvidesPackage{beamerINSAToulouse}[2026/08/17 Custom background theme for Beamer]
 
 \RequirePackage{tikz}
 \RequirePackage{graphicx}
 \RequirePackage{eso-pic}
-\RequirePackage{etoolbox}
-
-\newbool{showtlssec}
-\boolfalse{showtlssec}
-\newcommand{\enabletlssec}{\booltrue{showtlssec}}
 
 \newcommand{\backgroundfile}{background.pdf}
 
@@ -51,7 +46,7 @@
 \setbeamercolor{section number projected}{bg=RedFlash, fg=white}
 \setbeamercolor{subsection number projected}{bg=SubTitleColor, fg=white}
 
-% Couleurs des puces
+% Couleurs des puces générales
 \setbeamercolor{itemize item}{fg=RedFlash}
 \setbeamercolor{itemize subitem}{fg=SubTitleColor}
 \setbeamercolor{enumerate item}{fg=RedFlash}
@@ -77,10 +72,10 @@
     \begin{frame}[plain]
       \color{white}
       \begin{flushleft}
-        \vspace{1em}
+        \vspace{1.5em}
         {\huge \textbf{\inserttitle}} \\[1ex]
-        {\Large \textcolor{white}{\textit{\insertsubtitle}}}      
-      \end{flushleft}
+        {\large \textcolor{white}{\textit{\insertsubtitle}}}      
+        \end{flushleft}
 
       \begin{tikzpicture}[remember picture,overlay]
         % Bloc auteur et date (bas gauche)
@@ -90,16 +85,14 @@
         };
         
         % LOGO TLS-SEC
-        \ifbool{showtlssec}{%
-            \node[anchor=east, xshift=-2cm, yshift=2.9cm] at (current page.east) {%
-              \includegraphics[height=2cm]{tls-sec-logos/tls-sec.png}
-            };
-            \node[anchor=south, xshift=0cm, yshift=0.3cm] at (current page.south) {%
-              \includegraphics[height=0.5cm]{tls-sec-logos/n7.png}\hspace{0.5em}
-              \includegraphics[height=0.5cm]{tls-sec-logos/insa.png}\hspace{0.5em}
-              \includegraphics[height=0.5cm]{tls-sec-logos/enac.png}
-            };
-        }{}
+        \node[anchor=east, xshift=-2cm, yshift=2.9cm] at (current page.east) {%
+          \includegraphics[height=2cm]{tls-sec-logos/tls-sec.png}
+        };
+        \node[anchor=south, xshift=0cm, yshift=0.3cm] at (current page.south) {%
+          \includegraphics[height=0.5cm]{tls-sec-logos/n7.png}\hspace{0.5em}
+          \includegraphics[height=0.5cm]{tls-sec-logos/insa.png}\hspace{0.5em}
+          \includegraphics[height=0.5cm]{tls-sec-logos/enac.png}
+        };
       \end{tikzpicture}
       
     \end{frame}
@@ -127,4 +120,33 @@
       };
     \end{tikzpicture}%
   \end{beamercolorbox}%
+}
+
+% stylisation sommaire 
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+\setbeamertemplate{section in toc}{%
+    {\color{RedFlash}\textbf{\inserttocsectionnumber.}} \textbf{\inserttocsection}\par
+}
+\setbeamertemplate{subsection in toc}{%
+    \hspace{1.5em}{\color{SubTitleColor}$\blacktriangleright$} \color{black}\textit{\inserttocsubsection}\par
+}
+
+% --- Pages de transition pour les Sections ---
+\AtBeginSection[]{
+    \begin{frame}[plain]
+        \backgroundnormal
+        \vspace{0.5cm}
+        {\huge \bfseries \textcolor{RedFlash}{\thesection.} \textcolor{black}{\insertsection}}\\[0.1cm]
+        {\color{RedFlash}\rule{4cm}{1.5pt}}\\
+        
+        \centering
+        
+        % Liste des sous-sections
+        \begin{minipage}{0.7\textwidth}
+            \raggedright
+            \tableofcontents[currentsection,hideothersubsections]
+        \end{minipage}
+        \vfill
+    \end{frame}
 }
