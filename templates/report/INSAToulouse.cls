@@ -140,7 +140,7 @@
                 \includegraphics[height=1.0cm]{assets/tls-sec-logos/enac.png}
             };
             \node[anchor=east, inner sep=0, xshift=-1.6cm, yshift=-0.6cm] at (current page.east) {
-                \includegraphics[height=3.0cm]{assets/tls-sec-logos/tlssec.jpeg}
+                \includegraphics[height=3.0cm]{assets/tls-sec-logos/tls-sec.png}
             };
         }{}        
     \end{tikzpicture}
@@ -166,7 +166,7 @@
                 \includegraphics[height=1.0cm]{assets/tls-sec-logos/enac.png}
             };
             \node[anchor=east, inner sep=0, xshift=-1.6cm, yshift=-0.6cm] at (current page.east) {
-                \includegraphics[height=3.0cm]{assets/tls-sec-logos/tlssec.jpeg}
+                \includegraphics[height=3.0cm]{assets/tls-sec-logos/tls-sec.png}
             };
         }{}
     \end{tikzpicture}
